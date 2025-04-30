@@ -1,5 +1,5 @@
-import {initializeApp} from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
-import {getMessaging, onBackgroundMessage} from "https://www.gstatic.com/firebasejs/11.6.1/firebase-messaging-sw.js";
+importScripts("https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js");
+importScripts("https://www.gstatic.com/firebasejs/11.6.1/firebase-messaging-sw.js");
 
 // Initialize the Firebase app in the service worker by passing in
 // your app's Firebase config object.

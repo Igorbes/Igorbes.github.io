@@ -1,55 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <script
-            src="https://code.jquery.com/jquery-3.7.1.min.js"
-            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
-            crossorigin="anonymous"></script>
-    <script type="module">
-        // Import the functions you need from the SDKs you need
-        import {initializeApp} from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
-        import * as messaging from "https://www.gstatic.com/firebasejs/11.6.1/firebase-messaging.js";
-        // TODO: Add SDKs for Firebase products that you want to use
-        // https://firebase.google.com/docs/web/setup#available-libraries
-
-        // Your web app's Firebase configuration
-        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-        const firebaseConfig = {
-            apiKey: "AIzaSyCPonBWx1ACs0If9h8ZMmxhEGwa5Folccc",
-            authDomain: "trusteesecurity-demo.firebaseapp.com",
-            projectId: "trusteesecurity-demo",
-            storageBucket: "trusteesecurity-demo.firebasestorage.app",
-            messagingSenderId: "573985387120",
-            appId: "1:573985387120:web:738af0b8666787b64efab5",
-            measurementId: "G-KCM5K35T6V"
-        };
-
-        // Initialize Firebase
-        const firebase = initializeApp(firebaseConfig);
-        window.firebase = firebase;
-        window.messaging = messaging;
-    </script>
-
-</head>
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="utf-8">
+  <title>FirebaseAngular</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="stylesheet" href="styles.ef46db3751d8e999.css"></head>
 <body>
-    <h1>Hello World</h1>
-    <p>I'm hosted with GitHub Pages.</p>
-    <button type="button" id="subscribe">Следить за изменениями</button>
-    <script type="text/javascript">
+  <app-root></app-root>
+<script src="runtime.6f501f749b086835.js" type="module"></script><script src="polyfills.4e6ac3860a0fba50.js" type="module"></script><script src="main.1ce0e8c4d5db4278.js" type="module"></script>
 
-        $('#subscribe').on('click', function () {
-            const {messaging, firebase} = window;
-            const msg = messaging.getMessaging(firebase);
-            messaging.getToken(msg, {vapidKey: 'BL94TjLuuRzF1wCeADlBi8u1IQxKgr_zW3bZrkN6ubN5c2eU6zihj9R7keg2CAZTn91X2UNFCqZ8Vse9AcmcVos'}).then(res => {
-                alert('FCM token: ' + res);
-                console.log(res);
-            });
-            messaging.onMessage(msg, (payload) => {
-                console.log('Message from foreground received. ', payload);
-                // ...
-            });
-        });
-
-    </script>
-</body>
-</html>
+</body></html>

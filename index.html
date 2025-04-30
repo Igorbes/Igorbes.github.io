@@ -44,7 +44,10 @@
                 alert('FCM token: ' + res);
                 console.log(res);
             });
-
+            onMessage(messaging, (payload) => {
+                console.log('Message from foreground received. ', payload);
+                // ...
+            });
         });
 
     </script>

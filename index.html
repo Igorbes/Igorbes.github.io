@@ -40,7 +40,7 @@
         $('#subscribe').on('click', function () {
             const {messaging, firebase} = window;
             const msg = messaging.getMessaging(firebase);
-            messaging.getToken(msg).then(res => alert(res));
+            messaging.getToken(msg, {vapidKey: 'BL94TjLuuRzF1wCeADlBi8u1IQxKgr_zW3bZrkN6ubN5c2eU6zihj9R7keg2CAZTn91X2UNFCqZ8Vse9AcmcVos'}).then(res => alert(res));
         });
     </script>
 </body>

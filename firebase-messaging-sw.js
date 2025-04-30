@@ -1,5 +1,8 @@
-import { initializeApp } from "firebase/app";
-import { getMessaging, onBackgroundMessage } from "firebase/messaging/sw";
+// import { initializeApp } from "firebase/app";
+// import { getMessaging, onBackgroundMessage } from "firebase/messaging/sw";
+
+importScripts("https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js")
+importScripts("https://www.gstatic.com/firebasejs/11.6.1/firebase-messaging.js")
 
 
 const firebaseApp = initializeApp({

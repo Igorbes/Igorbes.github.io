@@ -37,18 +37,20 @@
     <p>I'm hosted with GitHub Pages.</p>
     <button type="button" id="subscribe">Следить за изменениями</button>
     <script type="text/javascript">
-        const {messaging, firebase} = window;
-        const msg = messaging.getMessaging(firebase);
+
         $('#subscribe').on('click', function () {
+            const {messaging, firebase} = window;
+            const msg = messaging.getMessaging(firebase);
             messaging.getToken(msg, {vapidKey: 'BL94TjLuuRzF1wCeADlBi8u1IQxKgr_zW3bZrkN6ubN5c2eU6zihj9R7keg2CAZTn91X2UNFCqZ8Vse9AcmcVos'}).then(res => {
                 alert('FCM token: ' + res);
                 console.log(res);
             });
+            messaging.onMessage(msg, (payload) => {
+                console.log('Message received. ', payload);
+                // ...
+            });
         });
-        messaging.onMessage(msg, (payload) => {
-            console.log('Message received. ', payload);
-            // ...
-        });
+
     </script>
 </body>
 </html>

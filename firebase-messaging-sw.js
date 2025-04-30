@@ -5,7 +5,7 @@ importScripts("https://www.gstatic.com/firebasejs/11.6.1/firebase-app-compat.js"
 importScripts("https://www.gstatic.com/firebasejs/11.6.1/firebase-messaging-compat.js")
 
 
-const firebaseApp = firebase.initializeApp({
+firebase.initializeApp({
     apiKey: "AIzaSyCPonBWx1ACs0If9h8ZMmxhEGwa5Folccc",
     authDomain: "trusteesecurity-demo.firebaseapp.com",
     projectId: "trusteesecurity-demo",
@@ -16,7 +16,7 @@ const firebaseApp = firebase.initializeApp({
 });
 
 const messaging = firebase.messaging();
-onBackgroundMessage(messaging, (payload) => {
+messaging.onMessage((payload) => {
     console.log('[firebase-messaging-sw.js] Received background message ', payload);
     // Customize notification here
     const notificationTitle = 'Background Message Title';

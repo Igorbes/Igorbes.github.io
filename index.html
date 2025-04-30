@@ -44,7 +44,9 @@
             messaging.getToken(msg, {vapidKey: 'BL94TjLuuRzF1wCeADlBi8u1IQxKgr_zW3bZrkN6ubN5c2eU6zihj9R7keg2CAZTn91X2UNFCqZ8Vse9AcmcVos'}).then(res => {
                 alert('FCM token: ' + res);
                 console.log(res);
+                navigator.serviceWorker.register("firebase-messaging-sw.js")
             });
+
         });
 
     </script>
